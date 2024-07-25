@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Servicios de actualización de drivers e instalación de aplicativos">
+    <meta name="keywords" content="DADM web, drivers, controladores, aplicativos, actualización, update">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="../Css/especial.css" rel="stylesheet" type="text/css">
+    
+    <!--CODIGO JAVASCRIPT-->
+    <script src="../json/Botones-toggleListbox.js"></script>
+    <script src="../json/box_Search.js"></script>
+
+        
+    <title>DADM WEB MULTISESIÓN</title>
+   
+</head>
+<body>
+    <div class="caja_principal">
+      <div class="mastil">
+        <div id="titulo_text"><h2 align="left">DAD-M WED <br> MULTISESIÓN</h2></div>
+        <img id="logo"
+        src="../Img/Ico/DADM WEB FULL.png"        
+        alt="Logo de la compañía"
+        width="92" 
+        height="92">
+        <div class="boton_A">
+        <a href="q-s.html">
+        <button id="boton5">QUIENES SOMOS?</button>
+        </a>
+        <a href="descargar.html"> 
+        <button id="boton7">Home</button>
+        </a>
+        </div>
+    </div>
+	</div>		
+    <div class="busqueda">
+        <ul>        
+        <input class="box_search" type="text" placeholder="Buscar: Aplicativo o App"> <!--pendiente de codigo js-->
+        <ul>
+        <button class="botonS" id="b_search" onclick ="toggleLisboxSearch()" >Busqueda Avanzada</button>
+       </ul>
+       </ul>
+		<div class="busqueda">
+       <img id= "robotD"
+            src="../Img/Gif/rbt15.gif"
+            alt="Botón de Imagen">  
+		<p> Aqui puedes buscar el aplicativo
+			para tu computadora, o la app
+			para tu tablet o celular.
+			Yo soy burbujas...
+		    </p>
+        </div>
+	</div>	
+       
+           
+   <div class="escritorio">    
+               
+            <img id= "fondo"
+            src="../Img/dadm web2.jpg"
+            alt="Botón de Imagen">
+
+        <script> /*CODIGO PARA BUSQUEDA POR CATEGORIA --*/
+            document.addEventListener('DOMContentLoader', function(){
+                var params = new URLSearchParams(window.location.search);
+                var listbox1 = params.get('listbox1');
+                var listbox2 = params.get('listbox2');
+                var listbox3 = params.get('listbox3');
+                var listbox4 = params.get('listbox4');
+
+                var escritorioDiv = document.getElementById('escritorio');
+                escritorioDiv.innerHTML = `
+                <p>Item 1: ${listbox1}</p>
+                <p>Item 2: ${listbox2}</p>
+                <p>Item 3: ${listbox3}</p>
+                <p>Item 4: ${listbox4}</p>
+            `;
+            });
+        </script>
+         
+    </div>
+    
+    <div class="foot" align="center" >
+       <h5 id="texto">Copyright 2024 Dad-M web Multisesion. <br> All rights reserved. </h5>
+    </div>
+
+</body>
+</html>
